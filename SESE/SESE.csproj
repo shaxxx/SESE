@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF1DA6F5-9E20-4241-8F61-D2CB8D51A320}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Krkadoni.SESE</RootNamespace>
+    <AssemblyName>SESE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SESE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnigmaSettings, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\EnigmaSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.10.3.0, Culture=neutral, PublicKeyToken=beaf6f427e128133, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Starksoft.Net.Ftp, Version=1.0.158.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Starksoft.Net.Ftp.dll</HintPath>
+    </Reference>
+    <Reference Include="Starksoft.Net.Proxy, Version=1.0.131.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Starksoft.Net.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="CopySerialize.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="GeneralOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralOptionsPage.designer.cs">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs" />
+    <Compile Include="MoveOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoveOptionsPage.designer.cs">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveSerialize.cs" />
+    <Compile Include="OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsDialog.designer.cs">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionsPage.designer.cs">
+      <DependentUpon>OptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PositionTransform.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="ProfileSerialize.cs" />
+    <Compile Include="ProfilesOptionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfilesOptionsPage.designer.cs">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplitList.designer.cs">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs" />
+    <Compile Include="TaskSerialize.cs" />
+    <Compile Include="vmXmlSatellite.cs" />
+    <EmbeddedResource Include="About.de.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.fr.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.hr.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.it.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.pl.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.de.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.fr.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.hr.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.it.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.pl.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralOptionsPage.resx">
+      <DependentUpon>GeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.de.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.fr.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.hr.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.it.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.pl.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveOptionsPage.resx">
+      <DependentUpon>MoveOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.de.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.fr.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.hr.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.it.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.pl.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsPage.resx">
+      <DependentUpon>OptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.de.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.fr.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.hr.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.it.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.pl.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilesOptionsPage.resx">
+      <DependentUpon>ProfilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.hr.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
+    <EmbeddedResource Include="SplitList.de.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitList.fr.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitList.hr.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitList.it.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitList.pl.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitList.resx">
+      <DependentUpon>SplitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SplitTemp.licenseheader" />
+    <None Include="SESE.log4net">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\EnigmaSettings.dll" />
+    <Content Include="lib\EnigmaSettings.pdb" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\SharpCompress.dll" />
+    <Content Include="lib\Starksoft.Net.Ftp.dll" />
+    <Content Include="lib\Starksoft.Net.Proxy.dll" />
+    <Content Include="license.txt" />
+    <Content Include="SESE.ico" />
+    <None Include="Resources\open21.png" />
+    <None Include="Resources\move_32x32.png" />
+    <None Include="Resources\Case  close224x24 24-bit.png" />
+    <None Include="Resources\up24x24 24-bit.png" />
+    <None Include="Resources\tasks_24x24%282%29.png" />
+    <None Include="Resources\save 2_24x24.png" />
+    <None Include="Resources\unknown_24x24.png" />
+    <None Include="Resources\open2.png" />
+    <None Include="Resources\top-gear.png" />
+    <None Include="Resources\Forum.png" />
+    <None Include="Resources\down24x24 24-bit.png" />
+    <None Include="Resources\icon_donate2.png" />
+    <None Include="Resources\delete-notice_16x16%282%29.png" />
+    <None Include="Resources\delete-notice_24x24%282%29.png" />
+    <None Include="Resources\computer-ok_16x16%283%29.png" />
+    <None Include="Resources\computer-ok_24x24%282%29.png" />
+    <None Include="Resources\add-notice_24x24%282%29.png" />
+    <None Include="Resources\copy32x32 24-bit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

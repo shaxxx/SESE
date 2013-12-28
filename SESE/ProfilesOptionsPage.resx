@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;lbServices.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;panelProfile.Name" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbHttpPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="&gt;&gt;lbProfiles.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbUsername.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="lbProfileName.Text" xml:space="preserve">
+    <value>Profile Name:</value>
+  </data>
+  <data name="&gt;&gt;lbHttpPort.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtSshPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="&gt;&gt;cbEnigma.Name" xml:space="preserve">
+    <value>cbEnigma</value>
+  </data>
+  <data name="panelProfile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>249, 307</value>
+  </data>
+  <data name="&gt;&gt;txtHttpPort.Name" xml:space="preserve">
+    <value>txtHttpPort</value>
+  </data>
+  <data name="&gt;&gt;lbUsername.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtSshPort.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtProfileName.Name" xml:space="preserve">
+    <value>txtProfileName</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtFtpPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 246</value>
+  </data>
+  <data name="txtProfileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="lbPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="&gt;&gt;txtSshPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;lbEnigma.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="$this.Title" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lbProfiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="panelProfile.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lbSshPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;txtProfileName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ceDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 276</value>
+  </data>
+  <data name="txtAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 29</value>
+  </data>
+  <data name="&gt;&gt;ceDefault.Name" xml:space="preserve">
+    <value>ceDefault</value>
+  </data>
+  <data name="&gt;&gt;txtHttpPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="lbSatellites.Text" xml:space="preserve">
+    <value>satellites.xml:</value>
+  </data>
+  <data name="cbEnigma.Items" xml:space="preserve">
+    <value>Enigma 1</value>
+  </data>
+  <data name="lbPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtFtpPort.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbHttpPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="lbUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 59</value>
+  </data>
+  <data name="&gt;&gt;txtFtpPort.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbHttpPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 195</value>
+  </data>
+  <data name="&gt;&gt;txtServices.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbFtpPort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbHttpPort.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lbEnigma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 114</value>
+  </data>
+  <data name="&gt;&gt;txtSatellites.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;lbSatellites.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbSatellites.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;txtSatellites.Name" xml:space="preserve">
+    <value>txtSatellites</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;txtHttpPort.Type" xml:space="preserve">
+    <value>Krkadoni.SESE.PortTextBox, SESE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbFtpPort.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtHttpPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="txtProfileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 2</value>
+  </data>
+  <data name="&gt;&gt;cbEnigma.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="lbAddress.Text" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="lbProfileName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbEnigma.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="txtFtpPort.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;txtSshPort.Name" xml:space="preserve">
+    <value>txtSshPort</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 317</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="lbServices.Text" xml:space="preserve">
+    <value>Services:</value>
+  </data>
+  <data name="&gt;&gt;txtProfileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lbServices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="&gt;&gt;panelProfile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Name" xml:space="preserve">
+    <value>txtUsername</value>
+  </data>
+  <data name="txtHttpPort.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;lbUsername.Name" xml:space="preserve">
+    <value>lbUsername</value>
+  </data>
+  <data name="&gt;&gt;lbAddress.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbFtpPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 249</value>
+  </data>
+  <data name="&gt;&gt;lbHttpPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="txtServices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 165</value>
+  </data>
+  <data name="&gt;&gt;lbSshPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="txtSatellites.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="&gt;&gt;lbPassword.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtProfileName.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lbProfileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="lbServices.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbSatellites.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;txtFtpPort.Name" xml:space="preserve">
+    <value>txtFtpPort</value>
+  </data>
+  <data name="&gt;&gt;txtAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSshPort.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbSshPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 222</value>
+  </data>
+  <data name="lbSshPort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbPassword.Name" xml:space="preserve">
+    <value>lbPassword</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;lbSatellites.Name" xml:space="preserve">
+    <value>lbSatellites</value>
+  </data>
+  <data name="txtSatellites.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cbEnigma.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 86</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelProfile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtFtpPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="&gt;&gt;lbSatellites.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="panelProfile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 4</value>
+  </data>
+  <data name="txtFtpPort.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ceDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
+  </data>
+  <data name="&gt;&gt;lbEnigma.Name" xml:space="preserve">
+    <value>lbEnigma</value>
+  </data>
+  <data name="lbHttpPort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 347</value>
+  </data>
+  <data name="&gt;&gt;lbFtpPort.Name" xml:space="preserve">
+    <value>lbFtpPort</value>
+  </data>
+  <data name="&gt;&gt;lbSshPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ceDefault.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;lbSshPort.Name" xml:space="preserve">
+    <value>lbSshPort</value>
+  </data>
+  <data name="&gt;&gt;lbProfiles.Name" xml:space="preserve">
+    <value>lbProfiles</value>
+  </data>
+  <data name="lbSatellites.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 141</value>
+  </data>
+  <data name="lbEnigma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="cbEnigma.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbProfileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lbEnigma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ceDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbSatellites.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="&gt;&gt;lbAddress.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;lbServices.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbProfiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 329</value>
+  </data>
+  <data name="lbHttpPort.Text" xml:space="preserve">
+    <value>HTTP Port:</value>
+  </data>
+  <data name="txtServices.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbFtpPort.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lbAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="&gt;&gt;lbProfiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbFtpPort.Text" xml:space="preserve">
+    <value>FTP Port:</value>
+  </data>
+  <data name="txtSshPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 219</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 83</value>
+  </data>
+  <data name="lbUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtSshPort.Type" xml:space="preserve">
+    <value>Krkadoni.SESE.PortTextBox, SESE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 56</value>
+  </data>
+  <data name="lbProfileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="&gt;&gt;lbProfileName.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;txtHttpPort.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbEnigma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 110</value>
+  </data>
+  <data name="lbFtpPort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="&gt;&gt;txtServices.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="lbEnigma.Text" xml:space="preserve">
+    <value>Enigma:</value>
+  </data>
+  <data name="&gt;&gt;txtServices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Krkadoni.SESE.OptionsPage, SESE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtSatellites.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="ceDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="cbEnigma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 21</value>
+  </data>
+  <data name="txtServices.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="&gt;&gt;txtAddress.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;lbUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbServices.Name" xml:space="preserve">
+    <value>lbServices</value>
+  </data>
+  <data name="&gt;&gt;lbFtpPort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbHttpPort.Name" xml:space="preserve">
+    <value>lbHttpPort</value>
+  </data>
+  <data name="&gt;&gt;lbServices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbSshPort.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;ceDefault.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;ceDefault.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbServices.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ceDefault.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAANkE3LLaAgAACyBJREFUWEe1
+        lwlUVeUWxz8RxfRZppnmnEqO5JSJOKCYYwpi4YAj4ACCoihpiIKAogg4oJKamjNlKWrOA4JmDjiUU4gj
+        goiRIMO9DJfze/vgbb1qvXrDem+vtdd37lnnfP//3vu/93eu+ksLUhYqXIX1/qpnoX+SHzZbbHLVIrVE
+        7lc1P/F/Mh0gXAU03fhmbtDl6dwuOEtBWRbPSzPZfCuWZpvrZNcLc2qvP+oSdKNy+Tv/EwtSlipCRdRc
+        pwr7nGhIaOrH7MwI5VDWZr5//i3X8hN4UJTM3cJkhnw1QRsaeSnfd21R4YiozGynsMcpw0KfxQ8NzhjV
+        +r8iFaEmqUiVU2GFolpsRZrvrMX4JAdW3vck9sFs4tIj2ZsZy94nq9n/dBWXXxxmRqInCWmPuPsL3Egv
+        w3a7KyOjsnBZmlXsMCdlk73v1Rrm3f+FLVWBKlphsVBR1VtR2VOh/CuiwiwZsN+WJffdCE0ZRWSqJ9Gp
+        XkTc8WBx6miOP93KtJO+xP+UjMMuT9yThuCwczr3hdCKw7kMCU4x2M360dOM8icWqt6WyE2VFijecFXU
+        dlG87WbN8JBEZsTHUz3iNez2NMLrx464Jbdl4pVOuF/pwOjkFky+1pqDT9bTZdsoAm444XN+KB9sD+Zp
+        PmQWwYNsE56xj+k07UpiZ+8LtcyIf7AItVGc2l6KBu6KFtPbMH1dOqd/gDtpxXx78zo1o97gnXjFB99Z
+        YJ9YEYdEKwacqY7judcZfvEt3K+2xOt6a2zjHFiYuI9r6XDyDuVmLIXlB7J5f9bV7HYzz9U3o/7Glqm0
+        ymGKJlMFfEYDJq96xI17Ap5h4OZjAymPijh35zFvxNTh7T0K+9OK7gmKnrL2TqxAzyRLeiVZMPT8KzT6
+        7ANm7SklT6L/o8VfLKC9T/ITUbqFGdlsUSq7WqjCemYlRiw7xsOsly+UaWAqg7sZxdwRIh/scKb2NoXd
+        SUWX40LixMvrbqeETKKi/THFW8uGE38FXhjheTEUm2Qf2eNXW3HgGdYTzx4yI5stQp2uvFg2CpzK9zfN
+        T5qtTDPxbep+aqx8hU8vuzMgqTrdj1WkzUHFO/sU7Q4rOh0VAkKi7pcKm+WfU1wCz4TAqtMQJ2QuPoBs
+        0YRuOqFRkbe0dyYmOpnRxSLUtEphrxK0KxPtN2x1KyzJIeJCLFZhtbCKrkTzrVVZezOA3Wkr2PUoHMfE
+        Orx3yAJbycTrm6zot7yAG5mSOcleqewVdxFmfAPrEmF38ss9k24baeqRlGZGF5Op1yjUw7jv8ssHdHtu
+        gAOigzOy2dEUCDhswif+F7psiOXNaCdeXdoI6w21OZ4ex+rbfoTddqdqeB3WHv99BHoZS8WNooksyYJB
+        sqO7S/h1rcm4oz3NDJTyiMnLT3oiKTK/f0pU7HMS1gjrc3IdcwlCJKVRusv9gP0mXLZk0yI6htcie/BK
+        aD089q1HE7Dfmk6gRPYslU7ILoQLEpSemQ0nfqa+65E95eBjl+a+N3uHkXR54G4u7LkNT/IgX+p462fY
+        eBUeymDZICTmHYc5h2DuEQg8KKS+hQV7wSlG44q57dBBZSmR1SBg+bLmSO3zxc+IHu7K3jezymgy6fTT
+        cgKu4dmBCw8beSFvfSdZ8EuCoDOw5KyuAVh2DrZfE1F9B65xMFFqOmM/TNsD7rth6tfQLxa2Sb1106N+
+        IWLKlVCzDSYyc0p4+MzAw6eFJN98zppd6axedZl33M+UNHA5UlONWPxs25qzpeUEdkoXLBCgMCHwiUS7
+        UYCNcv/XWurDZaoQGL5VViHgpRPaIcS+gL6RsClVIn+SQl5gdzICHXk804EHnvbc9bDj9gRbHk3pQ/qk
+        rixq2oNWk5K1huP2tVEjlj49vOl8CTnSt8vPS/QJyDSTNAsBb4k0W0qhCydP6igcygl57IRe0TD0M3Db
+        BOO3gPMaaCy/D3zkCItaosVNRNs+ltJd88QXiodRGreIUx5jsJ2SSfPZj6k/au8gNSw049Dmi8XlQMGS
+        9iARWvApyYBeYxFckQD/LArOevHSdVHp9x49h5mShQ8F2HUjjFkLXT+XLA5xQVs3COMGD4qXD6M4ahhF
+        iwZTEjKAojWeOHWPpt3MHFr6pAiBrwcp57D0bWsTjWQIgfkS/XwBD9TFJkKbIum+L6CFOmAOpAlomghS
+        HyzlahayDitg5DrxlRrdhUzkh76UrelPyeqxFIX0pyhUgBf0xfhJN8pWjiDB3Z2O49OoP/0edUbubqOc
+        gx/PCdpXQEaBRH0MPhXXwf0Pi8iEQJhcl59uot472ZDyVLpESKXKyH4vAhxjpK/XawwTAj1Wy7uOIQLU
+        D1O0K4Y5dhjnOGD0747B932Kp7RGWzmczQM8qDEiqfS18Qk1lHPI/XYen2VrDwVgnoD7CfBsSf/MA3K9
+        DwaKwmOlE7JkOF2XLrkuw0nvjoNyWnYJE0F+ppW34eAojZ5CZqzzNorntse0dAwFk9ti8OmKwasjhsnt
+        KBxjjWl0E4r9++PXblBBeRvqNjjkYf75JxrR0gHT4oWA9Pd0WaeLCJ03Szd8LzoQghcfvUz/HhlQ3ZYJ
+        udUCvlbAV4hHaPRaDv0nXcI4shZlYc6YPKwpmfwuheNaUuhqTYFLU/IG18H0cQNS+7YmWqnJ5QT6BtzZ
+        u+poAV/K2J24C3wF3FvS7/WVDBkR1nohlirpv/YYfpAsfCSC67lMY6hEPkTAB0r0fXUCUVIW35/J72yF
+        5m/Dw9aWFHSrTOnItylwrkf+h3XI71MDg311Cke0YVW1KhnlBPrNvdF85JKHZQdSNbxksOjDxVPAdTLO
+        QmCPnBP3nkHCTzBEwHsLmJNEr0f+K3ifxRrdRBPNQorIb1GR5x2q0Krrl3xRrQaFbStjHNqAPDsr8npU
+        J29QY0om2fJNvddN5QR06+5/I37x3lyWyAxw3waTBNxtuxDYIB8TUu8zMmTGSbv1itZw1iMX0eng/XTw
+        cA37MCEQAi2WFPOgWmUchuykqft9Wg5L4pylBTk9m2IYWIfcXjUpcO2EFujCvsZ1/0HAfnxClQHzbxQE
+        HzIxSUasDj5OBsxH6+GQnA+rpUU7L3opuH8G3j1Yo0uQPBNiorfz19T3yqK5eOOJafR/N4ArlSpR5NEX
+        w4i2lM124p7bAJZVsNxhhn9pvfyv2PcJvF02fksJE4XAGJlyjtLbO2VCyscSPSLNNZf1d+ALNWzna7w/
+        T6PjAo2GM0pp4VtKG98SGo9Pp55HBlOr2pFlU5+yec7k+zoSU+2VO2bY31uPWcnjewfeKhsZW8xYKYWj
+        1HzM5xp+2wRUov5QwAeI910qLhnRCdgJaOcAAZ+r0f4TsPEro9UMaDUNGroXYjX2Fh1aDuda1UoUz3Fh
+        R4NaL4KU+vP/DF18Lw609Tn7YlD4Ez6WEgySAdNbDhsHAXUQwNYC1GiaRr2pGk29NVrO1mgn3mKGRjMf
+        0YEA617bD14dm0TXlh3wrmLJJStLTrRqYFqilJ0Z6i/MPsGyk3dSnK3/ZfqF5zBaBs5AOYDsZfgEyxlw
+        UL4T1hyVjpEu6R0M1gLcbb60rRCtPxeq+eTRwimG0XVrMd1KEWNZgaMWlYhU6hMzwr9nNt6nbdpOPnWh
+        X8BF0+iVD9h5No/cQjkIys9GOSnlcys9W2P1ESN+XzxncPhPdBoYxYSGNoRYWRBiqVhSsSI7BHy5qnDC
+        vO1/bg08jtRs5nZkVlO3I4mNxh3OtJ58NL+z7wmjjfdRQ0O3A7l1R3+T+rcJJ7Z06+j16QalMj5XyhSj
+        lBajLLRVyqIwSlXYKnX/w38Cpf4OHbReHCFszdwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lbAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="lbSshPort.Text" xml:space="preserve">
+    <value>SSH Port:</value>
+  </data>
+  <data name="&gt;&gt;lbProfileName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtProfileName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbPassword.Text" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 317</value>
+  </data>
+  <data name="lbPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbServices.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 168</value>
+  </data>
+  <data name="lbProfiles.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lbEnigma.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtSshPort.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;lbProfileName.Name" xml:space="preserve">
+    <value>lbProfileName</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="txtHttpPort.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cbEnigma.Items1" xml:space="preserve">
+    <value>Enigma 2</value>
+  </data>
+  <data name="&gt;&gt;lbFtpPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtFtpPort.Type" xml:space="preserve">
+    <value>Krkadoni.SESE.PortTextBox, SESE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtHttpPort.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbProfileName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtFtpPort.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="lbSatellites.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbProfiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbAddress.Name" xml:space="preserve">
+    <value>lbAddress</value>
+  </data>
+  <data name="&gt;&gt;lbEnigma.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="txtSshPort.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbEnigma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbSshPort.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbUsername.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="&gt;&gt;txtServices.Name" xml:space="preserve">
+    <value>txtServices</value>
+  </data>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAddress.Name" xml:space="preserve">
+    <value>txtAddress</value>
+  </data>
+  <data name="&gt;&gt;panelProfile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProfilesOptionsPage</value>
+  </data>
+  <data name="&gt;&gt;txtSatellites.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAddress.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;lbPassword.Parent" xml:space="preserve">
+    <value>panelProfile</value>
+  </data>
+  <data name="&gt;&gt;lbAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtHttpPort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 192</value>
+  </data>
+  <data name="txtSatellites.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 138</value>
+  </data>
+  <data name="lbUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

@@ -1,0 +1,5 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+// Copyright (c) 2013 Krkadoni.com - Released under The MIT License.
+// Full license text can be found at http://opensource.org/licenses/MIT
+     

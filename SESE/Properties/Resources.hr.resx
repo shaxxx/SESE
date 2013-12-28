@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icon_gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\top-gear.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_zip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Case  close224x24 24-bit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_questionmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unknown_24x24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProfilesOptionsPage_btnAdd_Click_Profile__0__already_exists_" xml:space="preserve">
+    <value>Profil {0} već postoji!</value>
+  </data>
+  <data name="Profile_invalidValue_Invalid_value_" xml:space="preserve">
+    <value>Neispravna vrijednost!</value>
+  </data>
+  <data name="ProfilesOptionsPage_btnAdd_Click_Warning" xml:space="preserve">
+    <value>Upozorenje</value>
+  </data>
+  <data name="icon_add_item" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-notice_24x24(2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_computer_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer-ok_24x24(2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_computer_ok_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer-ok_16x16(3).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up24x24 24-bit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_delete_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-notice_16x16(2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_forum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Forum.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_donate2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_donate2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open21.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down24x24 24-bit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save 2_24x24.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tasks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tasks_24x24(2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-notice_24x24(2).png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy32x32 24-bit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveOptionsPage_MoveOptionsPage_Move" xml:space="preserve">
+    <value>Pomakni</value>
+  </data>
+  <data name="MoveOptionsPage_MoveOptionsPage_Copy" xml:space="preserve">
+    <value>Kopiraj</value>
+  </data>
+  <data name="WARNING_INVALID_FILENAME" xml:space="preserve">
+    <value>Neispravno ime datoteke.</value>
+  </data>
+  <data name="WARNING_INVALID_TASKNAME" xml:space="preserve">
+    <value>Neispravno ime zadatka.</value>
+  </data>
+  <data name="WARNING_NO_SAT_SELECTED" xml:space="preserve">
+    <value>Niste odabrali nijedan satelit.</value>
+  </data>
+  <data name="WARNING_OUTDIR_NOTEXIST" xml:space="preserve">
+    <value>Odabrani direktorij ne postoji!</value>
+  </data>
+  <data name="WARNING_SAME_OUTFOLDER1" xml:space="preserve">
+    <value>Drugi zadatak ima jednaku izlaznu mapu.</value>
+  </data>
+  <data name="WARNING_SAME_OUTFOLDER2" xml:space="preserve">
+    <value>Samo ZIP arhive mogu imati jednaku izlaznu mapu.</value>
+  </data>
+  <data name="WARNING_SAME_SATELLITES" xml:space="preserve">
+    <value>{0} ima odabrane jednake satelite.</value>
+  </data>
+  <data name="WARNING_TASKNAME_EXISTS" xml:space="preserve">
+    <value>Zadatak pod tim imenom već postoji.</value>
+  </data>
+  <data name="WARNING_TASK_SAME_OUT" xml:space="preserve">
+    <value>Drugi zadatak ima jednako ime datoteke.</value>
+  </data>
+  <data name="QUESTION_DELETE_TASK" xml:space="preserve">
+    <value>Jeste li sigurni da želite pobrisati odabrani zadatak?</value>
+  </data>
+  <data name="ERROR_FAILED_SERVICES" xml:space="preserve">
+    <value>Došlo je do greške prilikom učitavanja liste kanala.</value>
+  </data>
+  <data name="ERROR_FAILED_UNZIP" xml:space="preserve">
+    <value>Dearhiviranje neuspješno.</value>
+  </data>
+  <data name="ERROR_INVALID_SERV_DATA" xml:space="preserve">
+    <value>Nespravni podaci liste kanala.</value>
+  </data>
+  <data name="STATUS_SELECT_ARCHIVE" xml:space="preserve">
+    <value>Odaberite arhivu sa listom kanala.</value>
+  </data>
+  <data name="STATUS_SELECT_SERVICES" xml:space="preserve">
+    <value>Odaberite datoteku</value>
+  </data>
+  <data name="COPYOF" xml:space="preserve">
+    <value>Kopija</value>
+  </data>
+  <data name="ERROR_FAILED_ZIP" xml:space="preserve">
+    <value>Došlo je do greške prilikom spremanja ZIP arhive.</value>
+  </data>
+  <data name="STATUS_PROCESSING_TASK" xml:space="preserve">
+    <value>Obrađujem zadatak</value>
+  </data>
+  <data name="STATUS_READING_SERVICES" xml:space="preserve">
+    <value>Učitajem listu kanala</value>
+  </data>
+  <data name="DELETING" xml:space="preserve">
+    <value>Brišem</value>
+  </data>
+  <data name="DOWNLOADING" xml:space="preserve">
+    <value>Preuzimam</value>
+  </data>
+  <data name="ERROR_UPLOADING" xml:space="preserve">
+    <value>Greška prilikom prebacivanja</value>
+  </data>
+  <data name="STATUS_CONNECTED_TO" xml:space="preserve">
+    <value>Spojen na</value>
+  </data>
+  <data name="STATUS_CONNECTING_TO" xml:space="preserve">
+    <value>Spajam se na</value>
+  </data>
+  <data name="UPLOADING" xml:space="preserve">
+    <value>Prebacujem</value>
+  </data>
+  <data name="ERROR_DOWNLOADING" xml:space="preserve">
+    <value>Došlo je do greške prilikom preuzimanja</value>
+  </data>
+  <data name="POSITION_COLUMN_HEADER" xml:space="preserve">
+    <value>Pozicija</value>
+  </data>
+  <data name="SATELLITE_COLUMN_HEADER" xml:space="preserve">
+    <value>Satelit</value>
+  </data>
+  <data name="SELECT_COLUMN_HEADER" xml:space="preserve">
+    <value>Odabir</value>
+  </data>
+  <data name="TASKS_COLUMN_HEADER" xml:space="preserve">
+    <value>Zadaci</value>
+  </data>
+</root>
