@@ -1089,7 +1089,7 @@ namespace Krkadoni.SESE
                 if (!task.DVBC)
                 {
                     AppSettings.Log.DebugFormat("Removing cable transponders and services for task {0}", task);
-                    List<ITransponder> dvbcTransponders = new List<ITransponder>(settings.Transponders.OfType<ITransponderDVBC>().ToList());
+                    List<ITransponder> dvbcTransponders = new List<ITransponder>(settings.Transponders.OfType<ITransponderDVBC>().Select(x => (ITransponder)x).ToList());
                     settings.RemoveTransponders(dvbcTransponders);
                 }
 
@@ -1097,7 +1097,7 @@ namespace Krkadoni.SESE
                 if (!task.DVBT)
                 {
                     AppSettings.Log.DebugFormat("Removing terrestrial transponders and services for task {0}", task);
-                    List<ITransponder> dvbtTransponders = new List<ITransponder>(settings.Transponders.OfType<ITransponderDVBT>().ToList());
+                    List<ITransponder> dvbtTransponders = new List<ITransponder>(settings.Transponders.OfType<ITransponderDVBT>().Select(x => (ITransponder)x).ToList());
                     settings.RemoveTransponders(dvbtTransponders);
                 }
 
