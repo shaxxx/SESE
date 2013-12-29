@@ -1462,6 +1462,7 @@ namespace Krkadoni.SESE
                     if (
                         ftpItem.Name.ToLower().EndsWith(".tv")
                         || ftpItem.Name.ToLower().EndsWith(".radio")
+                        || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
                         || ftpItem.Name == "bouquets"
@@ -1640,6 +1641,7 @@ namespace Krkadoni.SESE
                     if (
                         ftpItem.Name.ToLower().EndsWith(".tv")
                         || ftpItem.Name.ToLower().EndsWith(".radio")
+                        || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
                         || ftpItem.Name == "bouquets"
