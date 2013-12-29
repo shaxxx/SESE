@@ -272,6 +272,7 @@
     <Content Include="lib\EnigmaSettings.dll" />
     <Content Include="lib\EnigmaSettings.pdb" />
     <Content Include="lib\log4net.dll" />
+    <Content Include="lib\SharpCompress.3.5.dll" />
     <Content Include="lib\SharpCompress.dll" />
     <Content Include="lib\Starksoft.Net.Ftp.dll" />
     <Content Include="lib\Starksoft.Net.Proxy.dll" />
