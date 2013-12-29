@@ -104,7 +104,8 @@ namespace Krkadoni.SESE
             positionStringColumn.Resizable = DataGridViewTriState.False;
             selectedColumn.Width = 80;
             selectedColumn.Resizable = DataGridViewTriState.False;
-            satelliteColumn.Width = 530;
+            satelliteColumn.Width = 360;
+            satelliteColumn.Resizable = DataGridViewTriState.True; ;
             gridSatellites.EditMode = DataGridViewEditMode.EditOnEnter;
 
             AppSettings.DefInstance.PropertyChanged += AppSettings_PropertyChanged;
