@@ -6,7 +6,10 @@ Description
 
 Simple settings editor for Enigma1 & Enigma2 based satellite receivers. You load the list, choose satellites you want and you’re done. All unselected satellites, empty bouquets and markers are automatically removed from the list. Delimiters (lines used to visually divide bouquets) specified in the application will be preserved even when empty.
 
-Additional info and support on http://www.krkadoni.com/.
+- Additional info and support on http://www.krkadoni.com/.
+- Quick start 60 seconds: http://www.youtube.com/watch?v=QAhxrvIh-kE
+- Tutorial 3:48 minutes: http://www.youtube.com/watch?v=l0cVjwhk40U
+
 
 Requirements
 ============
@@ -35,5 +38,5 @@ Features
 - multilingual support
 - option to move any satellite with corresponding transponders and services to another satellite position
 - option to copy any satellite with corresponding transponders and services to another satellite position
-- uses open source EnigmaSettings library to handle all the heavy work of settings loading, management and saving.
+- uses open source EnigmaSettings (https://github.com/shaxxx/EnigmaSettings) library to handle all the heavy work of settings loading, management and saving.
 
