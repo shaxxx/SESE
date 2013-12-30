@@ -176,7 +176,7 @@ namespace Krkadoni.SESE
 
         private static Language _currentLanguage;
         private static bool _donated;
-        private static bool _checkUpdates;
+        private static bool _checkUpdates = true;
         private static ILog _log;
 
         /// <summary>
