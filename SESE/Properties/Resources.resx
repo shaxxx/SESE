@@ -280,4 +280,13 @@
   <data name="open2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\open21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="QUESTION" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="INFO_NEW_VERSION" xml:space="preserve">
+    <value>New version is available.{0}Please visit {1} to download new version.</value>
+  </data>
+  <data name="QUESTION_NEW_VERSION" xml:space="preserve">
+    <value>New version is available. Would you like to download?</value>
+  </data>
 </root>

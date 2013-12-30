@@ -302,6 +302,15 @@ namespace Krkadoni.SESE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New version is available.{0}Please visit {1} to download new version..
+        /// </summary>
+        internal static string INFO_NEW_VERSION {
+            get {
+                return ResourceManager.GetString("INFO_NEW_VERSION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copyright (c) 2013 Krkadoni.com - Released under The MIT License.
         ///
         ///Permission is hereby granted, free of charge, to any person
@@ -396,11 +405,29 @@ namespace Krkadoni.SESE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Question.
+        /// </summary>
+        internal static string QUESTION {
+            get {
+                return ResourceManager.GetString("QUESTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete this task?.
         /// </summary>
         internal static string QUESTION_DELETE_TASK {
             get {
                 return ResourceManager.GetString("QUESTION_DELETE_TASK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New version is available. Would you like to download?.
+        /// </summary>
+        internal static string QUESTION_NEW_VERSION {
+            get {
+                return ResourceManager.GetString("QUESTION_NEW_VERSION", resourceCulture);
             }
         }
         

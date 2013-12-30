@@ -277,4 +277,13 @@
   <data name="TASKS_COLUMN_HEADER" xml:space="preserve">
     <value>Zadaci</value>
   </data>
+  <data name="INFO_NEW_VERSION" xml:space="preserve">
+    <value>Pronađena je nova verzija.{0}Posjetite {1} kako bi preuzeli novu verziju.</value>
+  </data>
+  <data name="QUESTION" xml:space="preserve">
+    <value>Pitanje</value>
+  </data>
+  <data name="QUESTION_NEW_VERSION" xml:space="preserve">
+    <value>Nova verzija je dostupna. Želite li je preuzeti?</value>
+  </data>
 </root>

@@ -30,6 +30,7 @@ namespace Krkadoni.SESE
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(AppSettings.DefInstance.CurrentLanguage.Culture);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            UpdateCheck.CheckAsync(UpdateCheck.CheckAsyncCallback);
             Application.Run(SplitList.DefInstance);
         }
     }

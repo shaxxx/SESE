@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Task.cs" />
     <Compile Include="TaskSerialize.cs" />
+    <Compile Include="UpdateCheck.cs" />
     <Compile Include="vmXmlSatellite.cs" />
     <EmbeddedResource Include="About.de.resx">
       <DependentUpon>About.cs</DependentUpon>

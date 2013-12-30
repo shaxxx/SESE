@@ -571,6 +571,7 @@ namespace Krkadoni.SESE
             dlg.ShowDialog(this);
             AppSettings.DefInstance.CancelEdit();
             UpdateProfileList();
+            UpdateControlsEnabled();
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
