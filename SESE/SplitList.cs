@@ -1,6 +1,6 @@
 ﻿// Copyright (c) 2013 Krkadoni.com - Released under The MIT License.
 // Full license text can be found at http://opensource.org/licenses/MIT
-     
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -300,7 +300,7 @@ namespace Krkadoni.SESE
             }
             catch (Exception ex)
             {
-                AppSettings.Log.Error("Silent directory delete failed.",ex);
+                AppSettings.Log.Error("Silent directory delete failed.", ex);
             }
         }
 
@@ -482,7 +482,7 @@ namespace Krkadoni.SESE
                 throw new ArgumentNullException("url");
 
             AppSettings.Log.DebugFormat("Making web request {0} for profile {1} with timeout {2}", url, profile.Name, timeOut);
-            
+
             var request = (HttpWebRequest)WebRequest.Create(url);
             if (!string.IsNullOrEmpty(profile.PasswordDecrypted))
             {
@@ -497,7 +497,7 @@ namespace Krkadoni.SESE
             if (responseStream != null)
             {
                 using (var reader = new StreamReader(responseStream))
-                {                   
+                {
                     var result = reader.ReadToEnd();
                     AppSettings.Log.DebugFormat("Web request {0} for profile {1} returned {2}{3}", url, profile.Name, Environment.NewLine, result);
                     return result;
@@ -601,7 +601,7 @@ namespace Krkadoni.SESE
                 ofd.Filter = @"Enigma2 settings (lamedb)|lamedb|Enigma1 settings (services)|services";
                 ofd.CheckFileExists = true;
                 ofd.CheckPathExists = true;
-                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                //ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 ofd.RestoreDirectory = true;
                 ofd.Title = Properties.Resources.STATUS_SELECT_SERVICES;
                 ofd.ValidateNames = true;
@@ -662,7 +662,7 @@ namespace Krkadoni.SESE
                 ofd.Filter = @"ZIP Archive (*.zip)|*.zip|RAR Archive (*.rar)|*.rar";
                 ofd.CheckFileExists = true;
                 ofd.CheckPathExists = true;
-                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                //ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 ofd.RestoreDirectory = true;
                 ofd.Title = Properties.Resources.STATUS_SELECT_ARCHIVE;
                 ofd.ValidateNames = true;
@@ -721,6 +721,11 @@ namespace Krkadoni.SESE
             System.Diagnostics.Process.Start(url);
         }
 
+        private void ceZIP_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateControlsEnabled();
+        }
+
         #endregion
 
         #region "Controls enabled"
@@ -740,8 +745,6 @@ namespace Krkadoni.SESE
         private bool RemoveTaskEnabled()
         {
             if (CurrentTask() == null)
-                return false;
-            if (_satellites == null || _satellites.Count == 0)
                 return false;
             return !IsBackgroundTaskRunning();
         }
@@ -802,7 +805,7 @@ namespace Krkadoni.SESE
 
         private bool ZipFilenameEnabled()
         {
-            return !IsBackgroundTaskRunning();
+            return (ceZIP.Checked && ceZIP.Enabled);
         }
 
         private bool DVBTEnabled()
@@ -917,8 +920,8 @@ namespace Krkadoni.SESE
 
             if (settings == null)
                 throw new ArgumentNullException("Settings");
-            
-            AppSettings.Log.DebugFormat("ProcessTask initialized for task {0} with positions {1}", task.Name, string.Join(",",task.Positions));
+
+            AppSettings.Log.DebugFormat("ProcessTask initialized for task {0} with positions {1}", task.Name, string.Join(",", task.Positions));
 
             SetStatus(Properties.Resources.STATUS_PROCESSING_TASK + @" " + task.Name);
 
@@ -1131,7 +1134,7 @@ namespace Krkadoni.SESE
         {
             if (settings != null && positions != null)
             {
-                AppSettings.Log.DebugFormat("DeleteSatellites initialized with positions {0}", string.Join(",",positions));
+                AppSettings.Log.DebugFormat("DeleteSatellites initialized with positions {0}", string.Join(",", positions));
                 var positionsToDelete = settings.Satellites.Where(x => !positions.Contains(x.Position)).Select(x => x.Position).ToList();
                 foreach (var position in positionsToDelete)
                 {
@@ -1429,7 +1432,7 @@ namespace Krkadoni.SESE
                 //send message to receiver
                 SendMessage(profile, String.Format("Please wait while {0} is reading your settings...", Uri.EscapeUriString(Application.ProductName)), 4);
 
-                AppSettings.Log.DebugFormat("Changing remote FTP folder to {0}",profile.SatellitesFolder);
+                AppSettings.Log.DebugFormat("Changing remote FTP folder to {0}", profile.SatellitesFolder);
                 ftp.ChangeDirectory(profile.SatellitesFolder);
                 AppSettings.Log.DebugFormat("Changed remote FTP folder to {0}", profile.SatellitesFolder);
                 AppSettings.Log.DebugFormat("Listing directory {0}", profile.SatellitesFolder);
@@ -1781,6 +1784,7 @@ namespace Krkadoni.SESE
         }
 
         #endregion
+
 
     }
 }

@@ -332,10 +332,13 @@ namespace Krkadoni.SESE
             set
             {
                 if (Equals(_fileName, value)) return;
-                var extension = Path.GetExtension(value);
-                if (extension != null && extension.ToLower() != ".zip")
+                if (Zip)
                 {
-                    value = value.TrimEnd('.') + ".zip";
+                    var extension = Path.GetExtension(value);
+                    if (extension != null && extension.ToLower() != ".zip")
+                    {
+                        value = value.TrimEnd('.') + ".zip";
+                    }                   
                 }
                 _fileName = value;
                 IsFileNameValid(value);

@@ -558,6 +558,7 @@
             this.ceZIP.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ceZIP.Name = "ceZIP";
             this.ceZIP.UseVisualStyleBackColor = true;
+            this.ceZIP.CheckedChanged += new System.EventHandler(this.ceZIP_CheckedChanged);
             // 
             // ceStream
             // 
