@@ -35,10 +35,6 @@
     <ApplicationIcon>SESE.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EnigmaSettings, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\EnigmaSettings.dll</HintPath>
-    </Reference>
     <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\log4net.dll</HintPath>
@@ -297,6 +293,12 @@
     <None Include="Resources\computer-ok_24x24%282%29.png" />
     <None Include="Resources\add-notice_24x24%282%29.png" />
     <None Include="Resources\copy32x32 24-bit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EnigmaSettings\EnigmaSettings\EnigmaSettings.csproj">
+      <Project>{a9c23e85-4340-48f8-b59b-9b9ad259dfc7}</Project>
+      <Name>EnigmaSettings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
