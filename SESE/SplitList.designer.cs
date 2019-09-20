@@ -52,7 +52,6 @@
             this.btnSettings = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAbout = new System.Windows.Forms.ToolStripButton();
-            this.btnDonate = new System.Windows.Forms.ToolStripButton();
             this.menuTasks = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.RemoveTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -73,7 +72,6 @@
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.btnUpload = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnForum = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridTasks = new System.Windows.Forms.DataGridView();
             this.gridSatellites = new System.Windows.Forms.DataGridView();
@@ -155,8 +153,7 @@
             this.toolStripSeparator4,
             this.btnSettings,
             this.toolStripSeparator5,
-            this.btnAbout,
-            this.btnDonate});
+            this.btnAbout});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -226,16 +223,6 @@
             resources.ApplyResources(this.btnAbout, "btnAbout");
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // btnDonate
-            // 
-            this.btnDonate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnDonate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDonate.ForeColor = System.Drawing.Color.White;
-            this.btnDonate.Image = global::Krkadoni.SESE.Properties.Resources.icon_donate2;
-            resources.ApplyResources(this.btnDonate, "btnDonate");
-            this.btnDonate.Name = "btnDonate";
-            this.btnDonate.Click += new System.EventHandler(this.btnDonate_Click);
             // 
             // menuTasks
             // 
@@ -325,8 +312,7 @@
             this.btnDownload,
             this.toolStripSeparator10,
             this.btnUpload,
-            this.toolStripSeparator11,
-            this.btnForum});
+            this.toolStripSeparator11});
             resources.ApplyResources(this.toolStrip2, "toolStrip2");
             this.toolStrip2.Name = "toolStrip2";
             // 
@@ -375,14 +361,6 @@
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             resources.ApplyResources(this.toolStripSeparator11, "toolStripSeparator11");
-            // 
-            // btnForum
-            // 
-            this.btnForum.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnForum.Image = global::Krkadoni.SESE.Properties.Resources.icon_forum;
-            resources.ApplyResources(this.btnForum, "btnForum");
-            this.btnForum.Name = "btnForum";
-            this.btnForum.Click += new System.EventHandler(this.btnForum_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -646,7 +624,6 @@
         private System.Windows.Forms.ToolStripButton btnSettings;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton btnAbout;
-        private System.Windows.Forms.ToolStripButton btnDonate;
         internal System.Windows.Forms.ContextMenuStrip menuTasks;
         internal System.Windows.Forms.ToolStripMenuItem RemoveTaskToolStripMenuItem;
         internal System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -667,7 +644,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripDropDownButton btnUpload;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripButton btnForum;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView gridTasks;
         private System.Windows.Forms.DataGridView gridSatellites;

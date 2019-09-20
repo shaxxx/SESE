@@ -109,7 +109,6 @@ namespace Krkadoni.SESE
             gridSatellites.EditMode = DataGridViewEditMode.EditOnEnter;
 
             AppSettings.DefInstance.PropertyChanged += AppSettings_PropertyChanged;
-            btnDonate.Visible = !AppSettings.DefInstance.Donated;
             UpdateControlsEnabled();
             UpdateProfileList();
             UpdateControlsWithTaskInfo();
@@ -133,7 +132,7 @@ namespace Krkadoni.SESE
         /// <param name="e"></param>
         private void AppSettings_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            btnDonate.Visible = !AppSettings.DefInstance.Donated;
+            
         }
 
         #region "Helper Methods"
