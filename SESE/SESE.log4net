@@ -42,13 +42,13 @@
     <logger name="SESE">
       <!--set level to "ALL" for debug purposes
       set level to "INFO" to get only INFO and WARN messages-->
-      <level value="INFO" />
+      <level value="ALL" />
       <appender-ref ref="FileAppender" />
     </logger>
     <logger name="EnigmaSettings">
       <!--set level to "ALL" for debug purposes
       set level to "INFO" to get only INFO and WARN messages-->
-      <level value="INFO" />
+      <level value="ALL" />
       <appender-ref ref="EnigmaSettingsFileAppender" />
     </logger>
   </log4net>

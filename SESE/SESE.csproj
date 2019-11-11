@@ -35,9 +35,8 @@
     <ApplicationIcon>SESE.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="SharpCompress, Version=0.10.3.0, Culture=neutral, PublicKeyToken=beaf6f427e128133, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -72,6 +71,7 @@
     <Compile Include="AppSettings.cs" />
     <Compile Include="CopySerialize.cs" />
     <Compile Include="Crypto.cs" />
+    <Compile Include="Log4NetLogger.cs" />
     <Compile Include="GeneralOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +251,7 @@
     <EmbeddedResource Include="SplitList.resx">
       <DependentUpon>SplitList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

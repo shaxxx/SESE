@@ -13,6 +13,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using Krkadoni.EnigmaSettings;
 using Krkadoni.EnigmaSettings.Interfaces;
+using log4net;
 using SharpCompress.Archive.Zip;
 using SharpCompress.Common;
 using SharpCompress.Compressor.Deflate;
@@ -879,6 +880,7 @@ namespace Krkadoni.SESE
             {
                 _satellites = new BindingList<VmXmlSatellite>();
                 _settings = (EnigmaSettings.Settings)caller.EndInvoke(ar);
+                _settings.Log = new Log4NetLogger(LogManager.GetLogger("EnigmaSettings"));
                 foreach (var xmlSatellite in _settings.Satellites.OrderByDescending(x => Int32.Parse(x.Position)).ToList())
                 {
                     _satellites.Add(new VmXmlSatellite(xmlSatellite));
@@ -1060,10 +1062,10 @@ namespace Krkadoni.SESE
         {
             if (_settings == null) return null;
             var st = new Stopwatch();
-            AppSettings.Log.DebugFormat("CloneSettings initialized for {0} services, {1} transponders and {2} satellites", _settings.Services, _settings.Transponders, _settings.Satellites);
+            AppSettings.Log.DebugFormat("CloneSettings initialized for {0} services, {1} transponders and {2} satellites", _settings.Services.Count, _settings.Transponders.Count, _settings.Satellites.Count);
             st.Start();
             var settings = (Settings)_settings.Clone();
-            st.Stop();
+            st.Stop(); 
             AppSettings.Log.DebugFormat("CloneSettings finished in {0} ms", st.ElapsedMilliseconds);
             return settings;
         }
