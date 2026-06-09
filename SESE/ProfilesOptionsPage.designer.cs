@@ -56,6 +56,8 @@ namespace Krkadoni.SESE
             this.btnDelete = new System.Windows.Forms.Button();
             this.ceDefault = new System.Windows.Forms.CheckBox();
             this.panelProfile = new System.Windows.Forms.Panel();
+            this.lblLamedbVersion = new System.Windows.Forms.Label();
+            this.cbLamedbVersion = new System.Windows.Forms.ComboBox();
             this.panelProfile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,9 +196,29 @@ namespace Krkadoni.SESE
             this.ceDefault.Name = "ceDefault";
             this.ceDefault.UseVisualStyleBackColor = true;
             this.ceDefault.CheckedChanged += new System.EventHandler(this.ceDefault_CheckedChanged);
-            // 
+            //
+            // lblLamedbVersion
+            //
+            this.lblLamedbVersion.AutoSize = true;
+            this.lblLamedbVersion.Location = new System.Drawing.Point(6, 308);
+            this.lblLamedbVersion.Name = "lblLamedbVersion";
+            this.lblLamedbVersion.Size = new System.Drawing.Size(71, 13);
+            this.lblLamedbVersion.Text = "lamedb ver.:";
+            //
+            // cbLamedbVersion
+            //
+            this.cbLamedbVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLamedbVersion.FormattingEnabled = true;
+            this.cbLamedbVersion.Items.AddRange(new object[] {
+            "lamedb (ver4)",
+            "lamedb5 (ver5)"});
+            this.cbLamedbVersion.Location = new System.Drawing.Point(83, 304);
+            this.cbLamedbVersion.Name = "cbLamedbVersion";
+            this.cbLamedbVersion.Size = new System.Drawing.Size(150, 21);
+            this.cbLamedbVersion.SelectedIndexChanged += new System.EventHandler(this.cbLamedbVersion_SelectedIndexChanged);
+            //
             // panelProfile
-            // 
+            //
             resources.ApplyResources(this.panelProfile, "panelProfile");
             this.panelProfile.Controls.Add(this.txtProfileName);
             this.panelProfile.Controls.Add(this.ceDefault);
@@ -219,6 +241,8 @@ namespace Krkadoni.SESE
             this.panelProfile.Controls.Add(this.lbEnigma);
             this.panelProfile.Controls.Add(this.cbEnigma);
             this.panelProfile.Controls.Add(this.txtAddress);
+            this.panelProfile.Controls.Add(this.lblLamedbVersion);
+            this.panelProfile.Controls.Add(this.cbLamedbVersion);
             this.panelProfile.Name = "panelProfile";
             // 
             // ProfilesOptionsPage
@@ -264,5 +288,7 @@ namespace Krkadoni.SESE
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.CheckBox ceDefault;
         private Panel panelProfile;
+        private System.Windows.Forms.Label lblLamedbVersion;
+        private System.Windows.Forms.ComboBox cbLamedbVersion;
     }
 }
