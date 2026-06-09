@@ -676,6 +676,14 @@ namespace Krkadoni.SESE
                 if (!UnzipArchive(ofd.FileName, tempDir))
                     return;
 
+                //try to find and load lamedb5 file (Enigma2 v5) first
+                var lamedb5Files = Directory.GetFiles(tempDir, "lamedb5", SearchOption.AllDirectories);
+                if (lamedb5Files.Any())
+                {
+                    OpenSettingsFileAsync(lamedb5Files[0]);
+                    return;
+                }
+
                 //try to find and load lamedb file
                 var lamedbFiles = Directory.GetFiles(tempDir, "lamedb", SearchOption.AllDirectories);
                 if (lamedbFiles.Any())
