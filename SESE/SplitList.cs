@@ -1470,6 +1470,7 @@ namespace Krkadoni.SESE
                         || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
+                        || ftpItem.Name == "lamedb5"
                         || ftpItem.Name == "bouquets"
                         || ftpItem.Name == "services.locked"
                         || ftpItem.Name == "whitelist"
@@ -1493,8 +1494,15 @@ namespace Krkadoni.SESE
 
                 AppSettings.Log.DebugFormat("DownloadSettings finished for profile {0}", profile.Name);
 
-                if (profile.Enigma == 2 && File.Exists(Path.Combine(destinationFolder, "lamedb")))
-                    return Path.Combine(destinationFolder, "lamedb");
+                if (profile.Enigma == 2)
+                {
+                    var lamedb5Path = Path.Combine(destinationFolder, "lamedb5");
+                    if (File.Exists(lamedb5Path))
+                        return lamedb5Path;
+                    var lamedbPath = Path.Combine(destinationFolder, "lamedb");
+                    if (File.Exists(lamedbPath))
+                        return lamedbPath;
+                }
 
                 if (profile.Enigma == 1 && File.Exists(Path.Combine(destinationFolder, "services")))
                     return Path.Combine(destinationFolder, "services");
