@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/SESE/v16
+/.vs/
 /SESE/bin/Debug
 /SESE/obj/Debug
 /SESE/bin/Release
