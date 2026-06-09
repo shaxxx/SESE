@@ -10,3 +10,6 @@
 
 # Private design specs / implementation plans (kept out of source control)
 /docs/superpowers/
+
+# Release artifacts
+/dist/
