@@ -58,6 +58,7 @@ namespace Krkadoni.SESE
             _mCheckUpdates = _checkUpdates;
             _mCurrentLanguage = _currentLanguage;
             _mDelimiters = _delimiters;
+            _mTtasks.Clear();
             _mProfiles.Clear();
             _mMoveList.Clear();
             _mCopyList.Clear();
@@ -88,6 +89,7 @@ namespace Krkadoni.SESE
         public void EndEdit()
         {
 
+            _mTtasks.Clear();
             _mProfiles.Clear();
             _mMoveList.Clear();
             _mCopyList.Clear();
@@ -156,10 +158,12 @@ namespace Krkadoni.SESE
                 positionTransform.CancelEdit();
             }
 
-            Languages.Clear();
+            // Restore via the backing field directly: the Languages getter re-seeds
+            // the defaults when the list is empty, which would duplicate entries.
+            _languages.Clear();
             foreach (Language language in _mLanguages)
             {
-                Languages.Add(language);
+                _languages.Add(language);
                 language.CancelEdit();
             }
 
@@ -516,6 +520,17 @@ namespace Krkadoni.SESE
             appSettings.Profiles = ProfileSerialize.Load().Items;
             appSettings.MoveList = MoveSerialize.Load().Items;
             appSettings.CopyList = CopySerialize.Load().Items;
+            // Reconcile the persisted language with the canonical Languages list so that
+            // a corrupt/stale Culture is healed and CurrentLanguage is a list instance
+            // (required for the SelectedItem data-binding on the language combo to match).
+            var savedLanguage = appSettings.CurrentLanguage;
+            if (savedLanguage != null)
+            {
+                var canonical = appSettings.Languages.FirstOrDefault(x => x.Name == savedLanguage.Name)
+                             ?? appSettings.Languages.FirstOrDefault(x => x.Culture == savedLanguage.Culture);
+                if (canonical != null)
+                    appSettings.CurrentLanguage = canonical;
+            }
             Log.Debug("All AppSettings data sucessfully loaded.");
             Log.DebugFormat("{0} profiles loaded", AppSettings.DefInstance.Profiles.Count);
             Log.DebugFormat("Selected language: {0}", AppSettings.DefInstance.CurrentLanguage.Name);
@@ -548,27 +563,27 @@ namespace Krkadoni.SESE
                 case "sr":
                 case "bs":
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "Hrvatski");
+                        return Languages.FirstOrDefault(x => x.Name == "Hrvatski");
                     }
                 case "de":
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "Deutsch");
+                        return Languages.FirstOrDefault(x => x.Name == "Deutsch");
                     }
                 case "fr":
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "Français");
+                        return Languages.FirstOrDefault(x => x.Name == "Français");
                     }
                 case "it":
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "Italiano");
+                        return Languages.FirstOrDefault(x => x.Name == "Italiano");
                     }
                 case "pl":
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "Polski");
+                        return Languages.FirstOrDefault(x => x.Name == "Polski");
                     }
                 default:
                     {
-                        return Languages.SingleOrDefault(x => x.Name == "English");
+                        return Languages.FirstOrDefault(x => x.Name == "English");
                     }
 
             }
