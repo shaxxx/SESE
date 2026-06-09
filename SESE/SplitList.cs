@@ -1665,6 +1665,7 @@ namespace Krkadoni.SESE
                         || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
+                        || ftpItem.Name == "lamedb5"
                         || ftpItem.Name == "bouquets"
                         || ftpItem.Name == "services.locked"
                         || ftpItem.Name == "whitelist"
@@ -1732,8 +1733,11 @@ namespace Krkadoni.SESE
             //create new settings instance to preserve original
             var settings = CloneSettings();
 
-            //make sure settings type matches receiver type
-            settings.SettingsVersion = profile.Enigma == 2 ? Enums.SettingsVersion.Enigma2Ver4 : Enums.SettingsVersion.Enigma1V1;
+            //make sure settings type matches receiver type and chosen lamedb version
+            settings.SettingsVersion = profile.Enigma == 2
+                ? (profile.LamedbVersion == 5 ? Enums.SettingsVersion.Enigma2Ver5
+                                              : Enums.SettingsVersion.Enigma2Ver4)
+                : Enums.SettingsVersion.Enigma1V1;
 
             ProcessTask(task, settings);
             UploadSettingsViaFTP(profile, task.Directory);
