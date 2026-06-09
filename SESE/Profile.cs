@@ -507,8 +507,9 @@ namespace Krkadoni.SESE
         }
 
         /// <summary>
-        /// Target lamedb format for Enigma2 uploads: 4 = lamedb (ver4), 5 = lamedb5 (ver5).
-        /// Any other value normalizes to 4. Ignored for Enigma1 profiles.
+        /// Target lamedb format version for Enigma2 uploads: 3 = lamedb (Enigma2Ver3),
+        /// 4 = lamedb (Enigma2Ver4), 5 = lamedb5 (Enigma2Ver5). Any other value
+        /// normalizes to 4. Ignored for Enigma1 profiles.
         /// </summary>
         [XmlElementAttribute]
         public int LamedbVersion
@@ -516,7 +517,7 @@ namespace Krkadoni.SESE
             get { return _lamedbVersion; }
             set
             {
-                var normalized = (value == 5) ? 5 : 4;
+                var normalized = (value == 3 || value == 5) ? value : 4;
                 if (Equals(_lamedbVersion, normalized))
                     return;
                 _lamedbVersion = normalized;
