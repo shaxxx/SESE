@@ -58,6 +58,8 @@ namespace Krkadoni.SESE
         {
             var currentProfile = (Profile)lbProfiles.SelectedItem;
             cbEnigma.SelectedIndex = (currentProfile != null && currentProfile.Enigma == 1) ? 0 : 1;
+            cbLamedbVersion.SelectedIndex = (currentProfile != null && currentProfile.LamedbVersion == 5) ? 1 : 0;
+            cbLamedbVersion.Enabled = (currentProfile != null && currentProfile.Enigma == 2);
             btnDelete.Enabled = (lbProfiles.SelectedItem != null);
             panelProfile.Enabled = (lbProfiles.SelectedItem != null);
         }
@@ -133,6 +135,15 @@ namespace Krkadoni.SESE
                 return;
             var currentProfile = (Profile)lbProfiles.SelectedItem;
             currentProfile.Enigma = cbEnigma.SelectedIndex == 0 ? sbyte.Parse("1") : sbyte.Parse("2");
+            cbLamedbVersion.Enabled = (currentProfile.Enigma == 2);
+        }
+
+        private void cbLamedbVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbProfiles.SelectedItem == null)
+                return;
+            var currentProfile = (Profile)lbProfiles.SelectedItem;
+            currentProfile.LamedbVersion = cbLamedbVersion.SelectedIndex == 1 ? 5 : 4;
         }
 
         #region "Validation Handlers"

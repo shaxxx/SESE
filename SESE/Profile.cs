@@ -46,6 +46,7 @@ namespace Krkadoni.SESE
         private bool _mPreferred;
         private string _mServicesFolder;
         private string _mSatellitesFolder;
+        private int _mLamedbVersion;
 
         public void BeginEdit()
         {
@@ -61,6 +62,7 @@ namespace Krkadoni.SESE
             _mPreferred = _preferred;
             _mServicesFolder = _servicesFolder;
             _mSatellitesFolder = _satellitesFolder;
+            _mLamedbVersion = _lamedbVersion;
             _isEditing = true;
         }
 
@@ -85,6 +87,7 @@ namespace Krkadoni.SESE
             Preferred = _mPreferred;
             ServicesFolder = _mServicesFolder;
             SatellitesFolder = _mSatellitesFolder;
+            LamedbVersion = _mLamedbVersion;
             _isEditing = false;
         }
 
@@ -339,6 +342,7 @@ namespace Krkadoni.SESE
         private Int32 _sshPort = 22;
         private Int32 _ftpPort = 21;
         private bool _preferred;
+        private int _lamedbVersion = 4;
         private string _servicesFolder = "/etc/enigma2/";
         private string _satellitesFolder = "/etc/tuxbox/";
         private const string SharedSecret = "SESE!";
@@ -499,6 +503,24 @@ namespace Krkadoni.SESE
                     return;
                 _preferred = value;
                 OnPropertyChanged("Preferred");
+            }
+        }
+
+        /// <summary>
+        /// Target lamedb format for Enigma2 uploads: 4 = lamedb (ver4), 5 = lamedb5 (ver5).
+        /// Any other value normalizes to 4. Ignored for Enigma1 profiles.
+        /// </summary>
+        [XmlElementAttribute]
+        public int LamedbVersion
+        {
+            get { return _lamedbVersion; }
+            set
+            {
+                var normalized = (value == 5) ? 5 : 4;
+                if (Equals(_lamedbVersion, normalized))
+                    return;
+                _lamedbVersion = normalized;
+                OnPropertyChanged("LamedbVersion");
             }
         }
 

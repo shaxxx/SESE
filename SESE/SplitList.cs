@@ -598,7 +598,7 @@ namespace Krkadoni.SESE
         {
             using (var ofd = new OpenFileDialog())
             {
-                ofd.Filter = @"Enigma2 settings (lamedb)|lamedb|Enigma1 settings (services)|services";
+                ofd.Filter = @"Enigma2 settings (lamedb)|lamedb;lamedb5|Enigma1 settings (services)|services";
                 ofd.CheckFileExists = true;
                 ofd.CheckPathExists = true;
                 //ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -675,6 +675,14 @@ namespace Krkadoni.SESE
                 var tempDir = GetTemporaryDirectory();
                 if (!UnzipArchive(ofd.FileName, tempDir))
                     return;
+
+                //try to find and load lamedb5 file (Enigma2 v5) first
+                var lamedb5Files = Directory.GetFiles(tempDir, "lamedb5", SearchOption.AllDirectories);
+                if (lamedb5Files.Any())
+                {
+                    OpenSettingsFileAsync(lamedb5Files[0]);
+                    return;
+                }
 
                 //try to find and load lamedb file
                 var lamedbFiles = Directory.GetFiles(tempDir, "lamedb", SearchOption.AllDirectories);
@@ -960,7 +968,8 @@ namespace Krkadoni.SESE
                 }
 
                 var enigmaVersion = (settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver3 |
-                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver4)
+                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver4 |
+                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver5)
                     ? "E2"
                     : "E1";
 
@@ -1470,6 +1479,7 @@ namespace Krkadoni.SESE
                         || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
+                        || ftpItem.Name == "lamedb5"
                         || ftpItem.Name == "bouquets"
                         || ftpItem.Name == "services.locked"
                         || ftpItem.Name == "whitelist"
@@ -1493,8 +1503,15 @@ namespace Krkadoni.SESE
 
                 AppSettings.Log.DebugFormat("DownloadSettings finished for profile {0}", profile.Name);
 
-                if (profile.Enigma == 2 && File.Exists(Path.Combine(destinationFolder, "lamedb")))
-                    return Path.Combine(destinationFolder, "lamedb");
+                if (profile.Enigma == 2)
+                {
+                    var lamedb5Path = Path.Combine(destinationFolder, "lamedb5");
+                    if (File.Exists(lamedb5Path))
+                        return lamedb5Path;
+                    var lamedbPath = Path.Combine(destinationFolder, "lamedb");
+                    if (File.Exists(lamedbPath))
+                        return lamedbPath;
+                }
 
                 if (profile.Enigma == 1 && File.Exists(Path.Combine(destinationFolder, "services")))
                     return Path.Combine(destinationFolder, "services");
@@ -1649,6 +1666,7 @@ namespace Krkadoni.SESE
                         || ftpItem.Name.ToLower().EndsWith(".epl")
                         || ftpItem.Name == "services"
                         || ftpItem.Name == "lamedb"
+                        || ftpItem.Name == "lamedb5"
                         || ftpItem.Name == "bouquets"
                         || ftpItem.Name == "services.locked"
                         || ftpItem.Name == "whitelist"
@@ -1716,8 +1734,11 @@ namespace Krkadoni.SESE
             //create new settings instance to preserve original
             var settings = CloneSettings();
 
-            //make sure settings type matches receiver type
-            settings.SettingsVersion = profile.Enigma == 2 ? Enums.SettingsVersion.Enigma2Ver4 : Enums.SettingsVersion.Enigma1V1;
+            //make sure settings type matches receiver type and chosen lamedb version
+            settings.SettingsVersion = profile.Enigma == 2
+                ? (profile.LamedbVersion == 5 ? Enums.SettingsVersion.Enigma2Ver5
+                                              : Enums.SettingsVersion.Enigma2Ver4)
+                : Enums.SettingsVersion.Enigma1V1;
 
             ProcessTask(task, settings);
             UploadSettingsViaFTP(profile, task.Directory);
