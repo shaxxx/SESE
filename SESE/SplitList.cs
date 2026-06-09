@@ -598,7 +598,7 @@ namespace Krkadoni.SESE
         {
             using (var ofd = new OpenFileDialog())
             {
-                ofd.Filter = @"Enigma2 settings (lamedb)|lamedb|Enigma1 settings (services)|services";
+                ofd.Filter = @"Enigma2 settings (lamedb)|lamedb;lamedb5|Enigma1 settings (services)|services";
                 ofd.CheckFileExists = true;
                 ofd.CheckPathExists = true;
                 //ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -968,7 +968,8 @@ namespace Krkadoni.SESE
                 }
 
                 var enigmaVersion = (settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver3 |
-                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver4)
+                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver4 |
+                                     settings.SettingsVersion == Enums.SettingsVersion.Enigma2Ver5)
                     ? "E2"
                     : "E1";
 
