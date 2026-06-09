@@ -419,7 +419,19 @@ namespace Krkadoni.SESE
         {
             get
             {
-                return string.IsNullOrEmpty(_password) ? String.Empty : Crypto.DecryptStringAES(_password, SharedSecret);
+                if (string.IsNullOrEmpty(_password))
+                    return String.Empty;
+                try
+                {
+                    return Crypto.DecryptStringAES(_password, SharedSecret);
+                }
+                catch (Exception)
+                {
+                    // Stored value is not valid ciphertext for the current key
+                    // (legacy/corrupt/default placeholder); treat as no password
+                    // instead of crashing the UI binding.
+                    return String.Empty;
+                }
             }
             set
             {
