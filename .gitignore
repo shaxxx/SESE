@@ -7,3 +7,6 @@
 /SESE/obj/Debug
 /SESE/bin/Release
 /SESE/obj/Release
+
+# Private design specs / implementation plans (kept out of source control)
+/docs/superpowers/
