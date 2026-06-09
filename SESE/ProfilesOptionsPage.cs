@@ -50,6 +50,10 @@ namespace Krkadoni.SESE
             txtFtpPort.DataBindings[0].Parse += Port_Parse;
             cbEnigma.DataBindings[0].Parse += Enigma_Parse;
             cbEnigma.DataBindings[0].Format += Enigma_Format;
+            var lamedbBinding = new Binding("SelectedItem", _bsProfiles, "LamedbVersion", true, DataSourceUpdateMode.OnPropertyChanged);
+            lamedbBinding.Parse += LamedbVersion_Parse;
+            lamedbBinding.Format += LamedbVersion_Format;
+            cbLamedbVersion.DataBindings.Add(lamedbBinding);
             btnDelete.Enabled = (lbProfiles.SelectedItem != null);
             panelProfile.Enabled = (lbProfiles.SelectedItem != null);
         }
@@ -58,8 +62,9 @@ namespace Krkadoni.SESE
         {
             var currentProfile = (Profile)lbProfiles.SelectedItem;
             cbEnigma.SelectedIndex = (currentProfile != null && currentProfile.Enigma == 1) ? 0 : 1;
-            cbLamedbVersion.SelectedIndex = (currentProfile != null && currentProfile.LamedbVersion == 5) ? 1 : 0;
-            cbLamedbVersion.Enabled = (currentProfile != null && currentProfile.Enigma == 2);
+            // cbLamedbVersion selection is data-bound to LamedbVersion; only its enabled state is handled here.
+            var current = _bsProfiles.Current as Profile;
+            cbLamedbVersion.Enabled = (current != null && current.Enigma == 2);
             btnDelete.Enabled = (lbProfiles.SelectedItem != null);
             panelProfile.Enabled = (lbProfiles.SelectedItem != null);
         }
@@ -82,6 +87,18 @@ namespace Krkadoni.SESE
                 e.Value = 1;
             else
                 e.Value = 2;
+        }
+
+        private static void LamedbVersion_Format(object sender, ConvertEventArgs e)
+        {
+            var version = (e.Value == null) ? 4 : Convert.ToInt32(e.Value);
+            e.Value = (version == 3) ? "ver. 3" : (version == 5) ? "ver. 5" : "ver. 4";
+        }
+
+        private static void LamedbVersion_Parse(object sender, ConvertEventArgs e)
+        {
+            var text = (e.Value == null) ? string.Empty : e.Value.ToString();
+            e.Value = (text == "ver. 3") ? 3 : (text == "ver. 5") ? 5 : 4;
         }
 
         private static void Port_Parse(object sender, ConvertEventArgs e)
@@ -136,14 +153,6 @@ namespace Krkadoni.SESE
             var currentProfile = (Profile)lbProfiles.SelectedItem;
             currentProfile.Enigma = cbEnigma.SelectedIndex == 0 ? sbyte.Parse("1") : sbyte.Parse("2");
             cbLamedbVersion.Enabled = (currentProfile.Enigma == 2);
-        }
-
-        private void cbLamedbVersion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lbProfiles.SelectedItem == null)
-                return;
-            var currentProfile = (Profile)lbProfiles.SelectedItem;
-            currentProfile.LamedbVersion = cbLamedbVersion.SelectedIndex == 1 ? 5 : 4;
         }
 
         #region "Validation Handlers"

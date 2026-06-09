@@ -1736,8 +1736,9 @@ namespace Krkadoni.SESE
 
             //make sure settings type matches receiver type and chosen lamedb version
             settings.SettingsVersion = profile.Enigma == 2
-                ? (profile.LamedbVersion == 5 ? Enums.SettingsVersion.Enigma2Ver5
-                                              : Enums.SettingsVersion.Enigma2Ver4)
+                ? (profile.LamedbVersion == 3 ? Enums.SettingsVersion.Enigma2Ver3
+                   : profile.LamedbVersion == 5 ? Enums.SettingsVersion.Enigma2Ver5
+                   : Enums.SettingsVersion.Enigma2Ver4)
                 : Enums.SettingsVersion.Enigma1V1;
 
             ProcessTask(task, settings);
